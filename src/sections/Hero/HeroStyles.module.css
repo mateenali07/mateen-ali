@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  height: 100dvh;
+  min-height: 500px;
+  padding: 20px;
+}
+
+.heroImg {
+  max-width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.socialLinks img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.socialLinks img:hover {
+  transform: scale(1.1);
+}
+
+.description {
+  max-width: 24ch;
+  margin: 0 auto;
+}
+
+.resumeBtn button {
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+  border: none;
+  border-radius: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resumeBtn button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.colorModeContainer {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.colorMode {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.colorMode:hover {
+  transform: rotate(20deg);
+}
+
+/* Desktop Styles */
+@media (width >= 800px) {
+  .container {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .heroImg {
+    max-width: 350px;
+  }
+}
+
+@media (width >= 1400px) {
+  .heroImg {
+    max-width: 400px;
+  }
+}
